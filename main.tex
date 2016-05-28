@@ -1,0 +1,79 @@
+% While LaTeX prints out all nice and pretty, most of the time we stare at the PDF on our computer screen
+% Therefore, we should have a color scheme and fonts that are easy on the eye on a screen.
+% So I took an idea from my programming IDE's and here is Solarized Dark LaTeX
+
+% Created by Christina Lee, christina.lee@gmail.com
+
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+% This allows us to add our colors
+\usepackage{xcolor}
+
+%just input either solarized light or dark to change between the colors
+\input{solarizeddark.tex}
+%input{solarizedlight.tex}
+
+\input{styling.tex}
+
+
+\title{\textcolor{red}{Solarized Dark}}
+\author{Christina Lee}
+\date{}
+
+\begin{document}
+
+% Global Page color base03
+\pagecolor{base03}
+% Global Text color base1
+\color{base1}
+
+
+
+\maketitle
+
+
+\section{Introduction}
+Isn't this so much easier to read? I know it would kill a printer, but most of the time we don't use a printer.  We just stare at the pdf, then at the raw LaTeX, then at the pdf.  So while we are composing a paper, or a thesis, or just writing up some notes, lets have something nice on the eyes that we just get rid of later.  Happy typing!
+
+
+\begin{equation}
+    a=\frac{1}{2} x
+\end{equation}
+
+\begin{equation*}
+    \int f(x)^2 \mathrm{d}x
+\end{equation*}
+
+\[
+    b=2
+\]
+
+
+\begin{tcolorbox}
+\[
+f(x)=2
+\]
+\end{tcolorbox}
+
+\begin{align}
+f(x)&=\cancelto{0}{x-y+3} \nonumber\\
+&=0
+\end{align}
+
+\begin{table}
+    \centering
+    \begin{tabular}{c|c | c}
+    1     & 0 & 0\\
+    \hline
+    0     & 1   &   0   \\
+    \hline
+    0   &   0   &   1
+    \end{tabular}
+    \caption{Caption}
+    \label{tab:my_label}
+\end{table}
+
+\subsection{subsection}
+
+\end{document}

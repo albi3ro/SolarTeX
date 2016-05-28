@@ -1,0 +1,42 @@
+\usepackage{tcolorbox}
+\tcbset
+{every box/.style={colback=base03,colframe=blue,boxrule=2mm,bottom=-7pt}}
+
+% We will use this to alter commands and environments, making equations and tables different colors
+\usepackage{etoolbox}
+% All equation environments are base2
+\AtBeginEnvironment{equation}{\color{base2}}
+\AtBeginEnvironment{equation*}{\color{base2}}
+\AtBeginEnvironment{math}{\color{violet}}
+\AtBeginEnvironment{align}{\color{base2}}
+\AtBeginEnvironment{tabular}{\color{violet}}
+\usepackage{cancel}
+\renewcommand{\CancelColor}{\color{red}}
+
+% A nice sans- serif font
+\usepackage[default,osfigures,scale=0.95]{opensans}
+
+% Un-italicized the equations and makes them easier to read. Check out
+% http://www.biwako.shiga-u.ac.jp/sensei/kumazawa/tex/newtx.html
+% for more options
+\usepackage{amsmath}
+\usepackage{cmbright}
+
+% Doesn't seem to be working in Share LaTeX
+% Gives you control over footer, header, etc. so we can have a highlighter page number
+% We also have the section title up on top
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\cfoot{\textcolor{violet}{\thepage} }
+% section title on the left side of the page
+\fancyhead[L]{\textcolor{violet}{\slshape \leftmark}}
+\fancyhead[R]{}
+
+% Allows us to style section headings
+\usepackage{sectsty}
+\sectionfont{\color{yellow}}
+\subsectionfont{\color{orange}}
+\subsubsectionfont{\color{green}}
+
+%Control over figure captions.  I bolded them as well
+\usepackage[font={color=cyan,bf}]{caption}
